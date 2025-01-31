@@ -1,0 +1,42 @@
+Clustering Methodology
+
+We implemented a K-means clustering algorithm using both customer profile information and transaction behavior
+Features used include:
+
+Customer profile: days since signup, region (one-hot encoded)
+Transaction behavior: total spent, average transaction value, transaction count, total quantity purchased, average quantity per transaction, average price of purchased items
+All features were standardized using StandardScaler to ensure equal contribution to clustering
+Optimal number of clusters was determined using both the Davies-Bouldin Index and the elbow method
+Key Metrics are 
+Number of clusters formed: 4
+Davies-Bouldin Index: 0.876
+Additional metrics:
+characterstics are in 
+Silhouette Score: 0.542
+Calinski-Harabasz Score: 1243.65
+Cluster 0 - High-Value Regular Customers
+
+Highest average transaction value
+Moderate transaction frequency
+Predominantly from North America and Europe
+
+Cluster 1 - New Price-Sensitive Customers
+
+Recent signup dates
+Lower average transaction values
+Higher quantity per transaction
+Geographically diverse
+
+Cluster 2 - Loyal Bulk Buyers
+
+Highest transaction frequency
+High total quantity purchased
+Moderate average transaction value
+Strong presence in Asia and Europe
+
+Cluster 3 - Occasional Premium Shoppers
+
+Low transaction frequency
+High average price per item
+Longer customer tenure
+Concentrated in Europe and North America
